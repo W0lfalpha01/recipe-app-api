@@ -15,7 +15,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v4
-      - name: TestS
+      - name: Test
         run: |
           docker compose up -d |
           docker compose run app sh -c "python manage.py test" |
