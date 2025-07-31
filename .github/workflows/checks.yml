@@ -22,5 +22,5 @@ jobs:
           docker compose down
 
       - name: Lint
-        run: docker-compose run app sh -c "flake8"
+        run: docker compose run app sh -c "flake8"
 
