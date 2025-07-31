@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: TestS
-        run:
+        run: |
           docker compose up -d
           docker compose run app sh -c "python manage.py test"
           docker compose down
